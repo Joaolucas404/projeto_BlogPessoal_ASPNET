@@ -1,20 +1,15 @@
-﻿using BlogAPI.Src.Modelos;
+﻿using BlogAPI1.Src.Modelos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlogAPI.Src.Contextos
+namespace BlogAPI1.Src.Contextos
 {
-    /// <summary>
-    /// <para> Classe contexto, responsavel por carregar contexto e definir DbSets</para>
-    /// <para> Criado por:João Lucas</para>
-    /// <para> Versão: 1.0</para>
-    /// <para> Data: 02/08/2022</para>
-    /// </summary>
     public class BlogPessoalContexto : DbContext
     {
+        internal readonly object Postagens;
         #region Atributos
 
         public DbSet<Usuario> Usuarios { get; set; }

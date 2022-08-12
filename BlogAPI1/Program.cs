@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlogAPI
+namespace BlogAPI1
 {
     public class Program
     {

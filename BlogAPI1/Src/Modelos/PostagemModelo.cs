@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlogAPI.Src.Modelos
+namespace BlogAPI1.Src.Modelos
 {
     /// <summary>
     /// <para> Classe responsável por representar tb_postagem no banco.</para>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace BlogAPI.Src.Modelos
+namespace BlogAPI1.Src.Modelos
 {
     /// <summary>
     /// <para> Classe responsável por representar tb_temas no banco.</para>

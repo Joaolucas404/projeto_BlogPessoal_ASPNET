@@ -15,4 +15,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlogAPI1\BlogAPI1.csproj" />
+  </ItemGroup>
+
 </Project>
