@@ -9,12 +9,6 @@ using System.Threading.Tasks;
 
 namespace BlogAPI1.Src.Repositorios.Implementacoes
 {
-    /// <summary> 
-    /// <para>Resumo: Classe responsavel por implementar IPostagem</para> 
-    /// <para>Criado por: Generation</para>
-    /// <para>Versão: 1.0</para> 
-    /// <para>Data: 12/05/2022</para> 
-    /// </summary> 
     public class PostagemRepositorio : IPostagem
     {
         #region Atributos
@@ -91,8 +85,12 @@ namespace BlogAPI1.Src.Repositorios.Implementacoes
                 return auxiliar != null;
             }
         }
-        
 
+        /// <summary>
+        /// <para>Resumo: Método assincrono para atualizar uma postagem</para>
+        /// </summary>
+        /// <param name="postagem">Construtor para atualiar postagem</param>
+        /// <returns cref="Exception">Id não pode ser nulo</returns>
         public async Task AtualizarPostagemAsync(Postagem postagem)
         {
             if (!ExisteTemaId(postagem.Tema.Id)) throw new Exception("Id do tema não encontrado!");

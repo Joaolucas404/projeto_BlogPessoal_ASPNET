@@ -34,11 +34,11 @@ namespace BlogAPI.Src.Repositorios.Implementacoes
                 Nome = usuario.Nome,
                 Email = usuario.Email,
                 Senha = usuario.Senha,
-                Foto = usuario.Foto
+                Foto = usuario.Foto,
+                Tipo = usuario.Tipo
             });
             await _contexto.SaveChangesAsync();
         }
-
         public async Task<Usuario> PegarUsuarioPeloEmailAsync(string email)
         {
             return await _contexto.Usuarios.FirstOrDefaultAsync(u => u.Email == email);

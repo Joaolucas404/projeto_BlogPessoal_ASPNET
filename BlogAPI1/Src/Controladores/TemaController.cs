@@ -1,5 +1,6 @@
 ﻿using BlogAPI1.Src.Modelos;
 using BlogAPI1.Src.Repositorios;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,7 +27,9 @@ namespace BlogAPI1.Src.Controladores
         #endregion
 
         #region Metodo
+       
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult> PegaTodosTemasAsync()
         {
             var lista = await _repositorio.PegarTodasTemasAsync();
@@ -37,6 +40,7 @@ namespace BlogAPI1.Src.Controladores
         }
 
         [HttpGet("id/{idTema}")]
+        [Authorize]
         public async Task<ActionResult> PegarTemaPeloIdAsync([FromRoute] int idTema)
         {
             try
@@ -50,6 +54,7 @@ namespace BlogAPI1.Src.Controladores
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult> NovoTemaAsync([FromBody] Tema tema)
         {
             try
@@ -64,6 +69,7 @@ namespace BlogAPI1.Src.Controladores
         }
 
         [HttpPut]
+        [Authorize(Roles = "ADMINISTRADOR")]
         public async Task<ActionResult> AtualizarTemaAsync([FromRoute] Tema tema)
         {
             try
@@ -78,6 +84,7 @@ namespace BlogAPI1.Src.Controladores
         }
 
         [HttpDelete("id/{idTema}")]
+        [Authorize(Roles = "ADMINISTRADOR")]
         public async Task<ActionResult> DeletarTemaAsync([FromRoute] int idTema)
         {
             try

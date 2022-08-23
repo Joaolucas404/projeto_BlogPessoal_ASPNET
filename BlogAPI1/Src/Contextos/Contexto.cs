@@ -9,12 +9,11 @@ namespace BlogAPI1.Src.Contextos
 {
     public class BlogPessoalContexto : DbContext
     {
-        internal readonly object Postagens;
         #region Atributos
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Tema> Temas { get; set; }
-        public DbSet<Postagem> Postagems { get; set; }
+        public DbSet<Postagem> Postagens { get; set; }
 
         #endregion
 
